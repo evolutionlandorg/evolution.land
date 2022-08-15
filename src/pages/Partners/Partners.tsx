@@ -45,7 +45,8 @@ interface Location {
   size: number,
   left: number,
   top: number
-  image: string
+  image: string,
+  link?: string,
 }
 
 interface PartnerLocations {
@@ -66,7 +67,8 @@ const Title = styled(PageH1)`
   }
 `
 
-const PartnerContainer = styled.div<{ size: number, left: number, top: number }>`
+const PartnerContainer = styled.a<{ size: number, left: number, top: number }>`
+  display: block;
   width: ${({ size }) => size}px;
   height:  ${({ size }) => size}px;
   position: absolute;
@@ -83,7 +85,7 @@ const PartnerContainer = styled.div<{ size: number, left: number, top: number }>
 `
 
 const Partner: React.FC<PartnerProps> = ({ className, locationList, location, layoutX, layoutY, ...rest }) => {
-  const { base, size, top, left, image } = location;
+  const { base, size, top, left, image, link } = location;
   const k = 1427 - layoutX < 633 - layoutY ? layoutY / 633 : layoutX / 1427;
 
   const offsetX = layoutX - 1427 > 0 ? (layoutX - 1427) / 2 : 0
@@ -99,7 +101,7 @@ const Partner: React.FC<PartnerProps> = ({ className, locationList, location, la
   if (k === 0) {
     return null
   }
-  return <PartnerContainer className={className} size={size * k} top={y} left={x} {...rest}>
+  return <PartnerContainer href={link} target='_blank' rel='noopener noreferrer' className={className} size={size * k} top={y} left={x} {...rest}>
     <img src={image} alt="..." />
   </PartnerContainer>
 }
@@ -110,161 +112,183 @@ const data: PartnerLocations = {
     size: 116,
     left: 256,
     top: 50,
-    image: p29
+    image: p29,
+    link: "https://clv.org/?type=wallet"
   },
   "2": {
     base: "0",
     size: 140,
     left: 418,
     top: 72,
-    image: p28
+    image: p28,
+    link: "https://unstoppabledomains.com/"
   },
   "3": {
     base: "0",
     size: 140,
     left: 589,
     top: 95,
-    image: p05
+    image: p05,
+    link: "https://play.decentraland.org/?position=0%2C0"
   },
   "4": {
     base: "0",
     size: 112,
     left: 743,
     top: 41,
-    image: p25
+    image: p25,
+    link: "https://www.did.id/"
   },
   "5": {
     base: "0",
     size: 125,
     left: 881,
     top: 86,
-    image: p07
+    image: p07,
   },
   "6": {
     base: "0",
     size: 133,
     left: 1027,
     top: 54,
-    image: p12
+    image: p12,
+    link: "https://astar.network/"
   },
   "7": {
     base: "0",
     size: 129,
     left: 168,
     top: 189,
-    image: p22
+    image: p22,
+    link: "https://www.hyperpay.tech/"
   },
   "8": {
     base: "0",
     size: 107,
     left: 329,
     top: 192,
-    image: p06
+    image: p06,
+    link: "https://mdex.com/#/"
   },
   "9": {
     base: "0",
     size: 120,
     left: 485,
     top: 209,
-    image: p03
+    image: p03,
+    link: "https://www.lendhub.org/"
   },
   "10": {
     base: "0",
     size: 123,
     left: 629,
     top: 256,
-    image: p24
+    image: p24,
+    link: "https://subsocial.network/"
   },
   "11": {
     base: "0",
     size: 135,
     left: 757,
     top: 172,
-    image: p02
+    image: p02,
+    link: "https://crust.network/"
   },
   "12": {
     base: "0",
     size: 88,
     left: 900,
     top: 241,
-    image: p31
+    image: p31,
+    link: "https://www.cryptoblades.io/"
   },
   "13": {
     base: "0",
     size: 125,
     left: 1005,
     top: 210,
-    image: p21
+    image: p21,
+    link: "http://token.im/"
   },
   "14": {
     base: "0",
     size: 153,
     left: 1151,
     top: 159,
-    image: p09
+    image: p09,
+    link: "https://yieldguild.io/"
   },
   "15": {
     base: "0",
     size: 145,
     left: 69,
     top: 337,
-    image: p01
+    image: p01,
+    link: "https://channels.finance/"
   },
   "16": {
     base: "0",
     size: 127,
     left: 237,
     top: 328,
-    image: p10
+    image: p10,
+    link: "http://maonft.com/"
   },
   "17": {
     base: "0",
     size: 106,
     left: 379,
     top: 311,
-    image: p04
+    image: p04,
+    link: "https://phala.network/"
   },
   "18": {
     base: "0",
     size: 133,
     left: 500,
     top: 347,
-    image: p14
+    image: p14,
+    link: "https://polygon.technology/"
   },
   "19": {
     base: "0",
     size: 120,
     left: 662,
     top: 409,
-    image: p26
+    image: p26,
+    link: "https://polygonstudios.com/"
   },
   "20": {
     base: "0",
     size: 107,
     left: 767,
     top: 323,
-    image: p27
+    image: p27,
+    link: "https://www.polkapet.world/"
   },
   "21": {
     base: "0",
     size: 133,
     left: 893,
     top: 343,
-    image: p30
+    image: p30,
+    link: "https://cbridge.celer.network/"
   },
   "22": {
     base: "0",
     size: 109,
     left: 1097,
     top: 330,
-    image: p16
+    image: p16,
+    link: "https://quickswap.exchange/#/swap"
   },
   "23": {
     base: "0",
     size: 138,
     left: 371,
     top: 454,
-    image: p20
+    image: p20,
+    link: "http://mytrade.org/"
   }
 }
 

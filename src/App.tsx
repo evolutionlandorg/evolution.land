@@ -17,12 +17,7 @@ import { Partners } from 'pages/Partners';
 const Container = styled.div<{ swiperIndex: number }>`
   color: #ffffff;
   background: ${({ swiperIndex }) => {
-    if (swiperIndex % 2 === 0) {
-      return 'linear-gradient(247.12deg, #2336D0 0%, #1C31E9 48.21%, #00C2FF 100%)'
-      // return'red'
-    }
     return 'linear-gradient(67.32deg, #2336D0 0%, #1C31E9 48.05%, #00C2FF 99.67%)'
-    // return 'blue'
   }};
   transition: background-color 1s linear;
   min-height: 100vh;
@@ -42,7 +37,7 @@ function App() {
     <Container swiperIndex={index}>
       <Header />
       <Flex flex={1} alignItems="center">
-        <Box height="600px" width="100%">
+        <Box height="650px" width="100%">
           <Swiper
             direction="vertical"
             modules={[Mousewheel]}

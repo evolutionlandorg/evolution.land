@@ -32,7 +32,7 @@ const Footer: React.FC<BareProps> = ({ className }) => {
       <a target='_blank' rel='noopener noreferrer' href='https://t.me/evolutionland9'><TelegramIcon /></a>
       <a target='_blank' rel='noopener noreferrer' href='https://twitter.com/Evolution_Land'><TwitterIcon /></a>
       <a target='_blank' rel='noopener noreferrer' href='https://medium.com/@evolutionland/'><MediumIcon /></a>
-      <a target='_blank' rel='noopener noreferrer' href='hello@evolution.land'><MailIcon /></a>
+      <a target='_blank' rel='noopener noreferrer' href='mailto:hello@evolution.land'><MailIcon /></a>
     </IconBox>
   </Container>;
 };

@@ -29,10 +29,10 @@ const Welcome: React.FC<BareProps> = ({ className }) => {
       </PageText>
       <Flex data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1250">
         <Button onClick={(() => {
-          window.open('https://portal.evolution.land', '_blank');
+          window.location.href = 'https://portal.evolution.land';
         })} endIcon={<RightArrowIcon color={theme.color.main} />}>Evolution Land</Button>
         <Button onClick={(() => {
-          window.open('https://arena.evolution.land', '_blank');
+          window.location.href = 'https://arena.evolution.land';
         })} endIcon={<RightArrowIcon color={theme.color.primary} />} variant={variants.SECONDARY} ml="20px">Apostle Arena</Button>
       </Flex>
     </PageLayoutLeft>

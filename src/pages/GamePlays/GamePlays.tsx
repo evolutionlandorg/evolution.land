@@ -8,7 +8,6 @@ import { PageH1, PageLayoutContainer, PageLayoutContainer2 } from 'styled/page';
 import { Flex, Grid } from 'components';
 import { ApostleIcon, DaoIcon, FarmIcon, FurnaceIcon, MapIcon, MarketIcon } from 'components/Svg';
 import SubtractImg from './image/Subtract.png';
-import useMatchBreakpoints from 'hooks';
 
 const Container = styled(Grid)`
 
@@ -28,7 +27,8 @@ const Title = styled(PageH1)`
   }
 `
 
-const ItemContainer = styled.div`
+const ItemContainer = styled.a`
+  text-decoration: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -103,37 +103,37 @@ const GamePlays: React.FC<BareProps> = ({ className }) => {
     <Title>Gameplays</Title>
     <Container>
       <GridBox>
-        <ItemContainer data-aos="fade-right" data-aos-duration="1500" >
+        <ItemContainer target='_blank' rel='noopener noreferrer' href='https://portal.evolution.land/land/5/map' data-aos="fade-right" data-aos-duration="1500" >
           <MapIcon />
           <ItemTitle>Map</ItemTitle>
         </ItemContainer>
       </GridBox>
       <GridBox>
-        <ItemContainer data-aos="fade-down" data-aos-duration="1500" >
+        <ItemContainer target='_blank' rel='noopener noreferrer' href='https://arena.evolution.land/' data-aos="fade-down" data-aos-duration="1500" >
           <ApostleIcon />
           <ItemTitle>Apostle Arena</ItemTitle>
         </ItemContainer>
       </GridBox>
       <GridBox>
-        <ItemContainer data-aos="fade-left" data-aos-duration="1500" >
+        <ItemContainer target='_blank' rel='noopener noreferrer' href='https://portal.evolution.land/land/5/market/land' data-aos="fade-left" data-aos-duration="1500" >
           <MarketIcon />
           <ItemTitle>MarketPlace</ItemTitle>
         </ItemContainer>
       </GridBox>
       <GridBox>
-        <ItemContainer data-aos="fade-right" data-aos-duration="1500" >
+        <ItemContainer target='_blank' rel='noopener noreferrer' href='https://portal.evolution.land/land/5/furnace/drill/upgrade' data-aos="fade-right" data-aos-duration="1500" >
           <FurnaceIcon />
           <ItemTitle>Furnace</ItemTitle>
         </ItemContainer>
       </GridBox>
       <GridBox>
-        <ItemContainer data-aos="fade-up" data-aos-duration="1500" >
+        <ItemContainer target='_blank' rel='noopener noreferrer' href='https://portal.evolution.land/land/5/gov' data-aos="fade-up" data-aos-duration="1500" >
           <DaoIcon />
           <ItemTitle>DAO</ItemTitle>
         </ItemContainer>
       </GridBox>
       <GridBox>
-        <ItemContainer data-aos="fade-left" data-aos-duration="1500" >
+        <ItemContainer target='_blank' rel='noopener noreferrer' href='https://portal.evolution.land/land/5/farm' data-aos="fade-left" data-aos-duration="1500" >
           <FarmIcon />
           <ItemTitle>Farm</ItemTitle>
         </ItemContainer>

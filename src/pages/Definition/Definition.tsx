@@ -3,7 +3,6 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import React from 'react';
-import styled from 'styled-components';
 import { BareProps } from 'components/types';
 import { PageH1, PageLayoutContainer, PageLayoutLeft, PageLayoutRight, PageText } from 'styled/page';
 import { Button, Flex } from 'components';
@@ -14,7 +13,7 @@ import lottieJson from './lottieJson.json';
 import useMatchBreakpoints from 'hooks';
 
 const Definition: React.FC<BareProps> = ({ className }) => {
-  const { isMobile, isTablet, isDesktop } = useMatchBreakpoints()
+  const { isDesktop } = useMatchBreakpoints()
 
   return <PageLayoutContainer>
     <PageLayoutLeft flexDirection="column" justifyContent="center">

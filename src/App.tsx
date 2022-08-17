@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { Box, Flex, Footer, Header, NavBar } from 'components';
 import { Welcome } from 'pages/Welcome';

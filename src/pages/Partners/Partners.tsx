@@ -1,11 +1,10 @@
 // Copyright 2018-2021 evolution.land authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import styled from 'styled-components';
 import { BareProps } from 'components/types';
-import { PageH1, PageLayoutContainer, PageLayoutContainer2 } from 'styled/page';
-import { Flex, Grid } from 'components';
+import { PageH1, PageLayoutContainer2 } from 'styled/page';
 import useMatchBreakpoints from 'hooks';
 import p01 from './images/p01.png'
 import p02 from './images/p02.png'
@@ -92,12 +91,12 @@ const Partner: React.FC<PartnerProps> = ({ className, locationList, location, la
   const x = useMemo(() => {
     if (base === '0') return left * k + offsetX;
     return (locationList[base].left + left + locationList[base].size) * k;
-  }, [base, k])
+  }, [base, k, left, locationList, offsetX])
 
   const y = useMemo(() => {
     if (base === '0') return top * k;
     return (locationList[base].top + top + locationList[base].size) * k;
-  }, [base, k])
+  }, [base, k, locationList, top])
   if (k === 0) {
     return null
   }
@@ -293,8 +292,6 @@ const data: PartnerLocations = {
 }
 
 const GamePlays: React.FC<BareProps> = ({ className }) => {
-  const { isMobile, isTablet, isDesktop } = useMatchBreakpoints()
-
   const [layoutX, setLayoutX] = useState<number>(0);
   const [layoutY, setLayoutY] = useState<number>(0);
 

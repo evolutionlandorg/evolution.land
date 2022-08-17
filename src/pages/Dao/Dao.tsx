@@ -3,17 +3,14 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import React from 'react';
-import styled from 'styled-components';
 import { BareProps } from 'components/types';
 import { PageH1, PageLayoutContainer, PageLayoutLeft, PageLayoutRight, PageText } from 'styled/page';
-import { Button, Flex } from 'components';
-import { variants } from 'components/Button/Button';
-import { Player, Controls } from '@lottiefiles/react-lottie-player';
+import { Player } from '@lottiefiles/react-lottie-player';
 import lottieJson from './lottieJson.json';
 import useMatchBreakpoints from 'hooks';
 
 const Dao: React.FC<BareProps> = ({ className }) => {
-  const { isMobile, isTablet, isDesktop } = useMatchBreakpoints()
+  const { isDesktop } = useMatchBreakpoints()
 
   return <PageLayoutContainer className={className}>
     <PageLayoutLeft flexDirection="column" justifyContent="center">

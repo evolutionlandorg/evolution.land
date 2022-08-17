@@ -4,8 +4,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { BareProps } from 'components/types';
-import { PageH1, PageLayoutContainer, PageLayoutContainer2 } from 'styled/page';
-import { Flex, Grid } from 'components';
+import { PageH1, PageLayoutContainer2 } from 'styled/page';
+import { Grid } from 'components';
 import { ApostleIcon, DaoIcon, FarmIcon, FurnaceIcon, MapIcon, MarketIcon } from 'components/Svg';
 import SubtractImg from './image/Subtract.png';
 

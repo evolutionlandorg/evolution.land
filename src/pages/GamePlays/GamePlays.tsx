@@ -7,7 +7,6 @@ import { BareProps } from 'components/types';
 import { PageH1, PageLayoutContainer2 } from 'styled/page';
 import { Grid } from 'components';
 import { ApostleIcon, DaoIcon, FarmIcon, FurnaceIcon, MapIcon, MarketIcon } from 'components/Svg';
-import SubtractImg from './image/Subtract.png';
 
 const Container = styled(Grid)`
 
@@ -32,8 +31,9 @@ const ItemContainer = styled.a`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: url(${SubtractImg}) no-repeat;
+  background-color: #fff;
   background-size: contain;
+  border-radius: 20px;
   width: calc(343px*0.5);
   height: calc(243px*0.5);
   > svg {
@@ -41,14 +41,15 @@ const ItemContainer = styled.a`
   }
 
   ${({ theme }) => theme.mediaQueries.md} {
-    width: calc(343px*0.6);
-    height: calc(243px*0.6);
+    width: calc(343px*0.5);
+    height: calc(243px*0.5);
     > svg {
       width: 50px;
     }
   }
 
   ${({ theme }) => theme.mediaQueries.lg} {
+    border-radius: 40px;
     width: calc(343px*0.6);
     height: calc(243px*0.6);
     > svg {
@@ -57,6 +58,7 @@ const ItemContainer = styled.a`
   }
 
   ${({ theme }) => theme.mediaQueries.xl} {
+    border-radius: 40px;
     width: calc(343px*0.8);
     height: calc(243px*0.8);
     > svg {
@@ -82,19 +84,20 @@ const ItemTitle = styled.p`
   font-size: 16px;
   line-height: 1.1;
   text-align: center;
-  color: ${({ theme }) => theme.color.primary};
+  color: ${({ theme }) => theme.color.main};
   margin-top: 15px;
 
   ${({ theme }) => theme.mediaQueries.md} {
-    font-size: 26px;
+    font-size: 20px;
   }
 
   ${({ theme }) => theme.mediaQueries.lg} {
-    font-size: 30px;
+    font-size: 24px;
   }
 
   ${({ theme }) => theme.mediaQueries.xl} {
-    font-size: 36px;
+    font-size: 30px;
+    font-weight: 700;
   }
 `
 

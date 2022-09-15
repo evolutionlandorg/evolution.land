@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 
 import { Flex } from 'components';
-import { DiscordIcon, GithubIcon, MailIcon, MediumIcon, TelegramIcon, TwitterIcon } from 'components/Svg';
+import { DeworkIcon, DiscordIcon, GithubIcon, MailIcon, MediumIcon, TelegramIcon, TwitterIcon } from 'components/Svg';
 import useMatchBreakpoints from 'hooks';
 import React from 'react';
 import styled from 'styled-components';
@@ -27,6 +27,7 @@ const Footer: React.FC<BareProps> = ({ className }) => {
   return <Container flexDirection={isMobile ? 'column-reverse' : 'row'} justifyContent="space-between" className={className}>
     <p>© 2021 Evolution Land All Rights Reserved</p>
     <IconBox>
+      <a target='_blank' rel='noopener noreferrer' href='https://app.dework.xyz/evolution-land-dao/'><DeworkIcon /></a>
       <a target='_blank' rel='noopener noreferrer' href='https://github.com/evolutionlandorg/'><GithubIcon /></a>
       <a target='_blank' rel='noopener noreferrer' href='https://discord.gg/RBeJQgfsvW'><DiscordIcon /></a>
       <a target='_blank' rel='noopener noreferrer' href='https://t.me/evolutionland9'><TelegramIcon /></a>

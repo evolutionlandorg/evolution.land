@@ -5,6 +5,7 @@ export { default as MapIcon } from './Icons/Map';
 export { default as GameBoxIcon } from './Icons/GameBox';
 export { default as ApostleIcon } from './Icons/Apostle';
 export { default as DaoIcon } from './Icons/Dao';
+export { default as DeworkIcon } from './Icons/Dework';
 export { default as FarmIcon } from './Icons/Farm';
 export { default as MarketIcon } from './Icons/Market';
 export { default as FurnaceIcon } from './Icons/Furnace';

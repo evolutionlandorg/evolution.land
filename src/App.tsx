@@ -7,7 +7,6 @@ import { Mousewheel } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/mousewheel'
-import { Apostle } from 'pages/Apostle';
 import { Dao } from 'pages/Dao';
 import { GamePlays } from 'pages/GamePlays';
 import styled from 'styled-components';
@@ -57,7 +56,6 @@ function App() {
           >
             <SwiperSlide><Welcome /></SwiperSlide>
             <SwiperSlide><Definition /></SwiperSlide>
-            <SwiperSlide><Apostle /></SwiperSlide>
             <SwiperSlide><Dao /></SwiperSlide>
             <SwiperSlide><GamePlays /></SwiperSlide>
             <SwiperSlide><Partners /></SwiperSlide>

@@ -72,10 +72,6 @@ const NavMenu: React.FC<BareProps> = ({ className }) => {
     <MenuItem as='a' href="https://github.com/evolutionlandorg" target='_blank' rel='noopener noreferrer'>
       GITHUB
     </MenuItem>
-    <Line />
-    <MenuItem as='a' href="https://v2.evolution.land/" target='_blank' rel='noopener noreferrer'>
-      BACK TO V2.0
-    </MenuItem>
     <ModifyLine />
   </Container>;
 };

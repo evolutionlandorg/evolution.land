@@ -31,9 +31,6 @@ const Welcome: React.FC<BareProps> = ({ className }) => {
         <Button onClick={(() => {
           window.location.href = 'https://portal.evolution.land';
         })} endIcon={<RightArrowIcon color={theme.color.main} />}>Evolution Land</Button>
-        <Button onClick={(() => {
-          window.location.href = 'https://arena.evolution.land';
-        })} endIcon={<RightArrowIcon color={theme.color.primary} />} variant={variants.SECONDARY} ml="20px">Apostle Arena</Button>
       </Flex>
     </PageLayoutLeft>
     <PageLayoutRight flexDirection="column" justifyContent="center">

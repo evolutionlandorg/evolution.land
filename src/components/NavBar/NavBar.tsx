@@ -12,7 +12,7 @@ export interface Props extends BareProps {
   swiperIndex: number;
 }
 
-const StyledABC123 = styled.div`
+const StyledNavBarBox = styled.div`
   position: absolute;
   top: 50%;
   margin-top: -124px;
@@ -25,7 +25,7 @@ const StyledABC123 = styled.div`
   }
 
   ${({ theme }) => theme.mediaQueries.md} {
-    margin-top: -215px;
+    margin-top: -174px;
     left: 60px;
   }
 `;
@@ -50,14 +50,13 @@ const Line: React.FC<{ baseIndex: number, currentIndex: number }> = ({ baseIndex
   return <StyledLine src={unreadLine} />;
 }
 const NavBar: React.FC<Props> = ({ className, swiperIndex }) => {
-  return <StyledABC123>
+  return <StyledNavBarBox>
     <TopPointer src={topPointer} />
     <Line baseIndex={1} currentIndex={swiperIndex} />
     <Line baseIndex={2} currentIndex={swiperIndex} />
     <Line baseIndex={3} currentIndex={swiperIndex} />
     <Line baseIndex={4} currentIndex={swiperIndex} />
-    <Line baseIndex={5} currentIndex={swiperIndex} />
-  </StyledABC123>;
+  </StyledNavBarBox>;
 };
 
 export default NavBar;
